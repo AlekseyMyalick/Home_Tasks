@@ -25,7 +25,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void Counting_EmptyLine()
         {
-            DEV_1.Lines line = new DEV_1.Lines("");
+            DEV_1.Lines line = new DEV_1.Lines(String.Empty);
             int actual = line.Counting();
             int expected = 0;
             Assert.AreEqual(actual, expected);

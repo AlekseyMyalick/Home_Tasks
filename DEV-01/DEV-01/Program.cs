@@ -6,10 +6,6 @@ namespace DEV_1
     {
         static void Main(string[] args)
         {
-            Lines lines = new Lines("jjjsnn\ndsds");
-            Console.WriteLine(lines.Line);
-            Console.WriteLine(lines.LineLength);
-            Console.WriteLine(lines.Counting());
         }
     }
 }
