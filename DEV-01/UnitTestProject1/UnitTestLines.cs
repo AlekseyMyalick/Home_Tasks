@@ -17,7 +17,7 @@ namespace UnitTestProject1
         public void Counting_NormalLine()
         {
             DEV_1.Lines line = new DEV_1.Lines("abadcddd");
-            int actual = line.Counting();
+            int actual = line.CountingNonRepeatingLetters();
             int expected = 6;
             Assert.AreEqual(actual, expected);
         }
@@ -26,7 +26,7 @@ namespace UnitTestProject1
         public void Counting_EmptyLine()
         {
             DEV_1.Lines line = new DEV_1.Lines(String.Empty);
-            int actual = line.Counting();
+            int actual = line.CountingNonRepeatingLetters();
             int expected = 0;
             Assert.AreEqual(actual, expected);
         }
@@ -41,7 +41,7 @@ namespace UnitTestProject1
                 "fffffvnldfvnjfkkkkkdlfvnerrlviiiiirnfvliiiiiiibnnnnnnruvldirjnvruuuuuvnldruubvnkldrklvr" +
                 "vndlvurfnldfubfvnrivnuldsdurvbruidlfmmmmdlrjvunsrnulufvlrdivrbvldsfnvjruhbvnsdljvfusdll" +
                 "llvnruvdlsfvnuslbllvlrsirurv");
-            int actual = line.Counting();
+            int actual = line.CountingNonRepeatingLetters();
             int expected = 153;
             Assert.AreEqual(actual, expected);
         }
@@ -50,7 +50,7 @@ namespace UnitTestProject1
         public void Counting_AllRepit()
         {
             DEV_1.Lines line = new DEV_1.Lines("aaa");
-            int actual = line.Counting();
+            int actual = line.CountingNonRepeatingLetters();
             int expected = 1;
             Assert.AreEqual(actual, expected);
         }
@@ -59,7 +59,7 @@ namespace UnitTestProject1
         public void Counting_LittersToLower()
         {
             DEV_1.Lines line = new DEV_1.Lines("AbaBcDDd");
-            int actual = line.Counting();
+            int actual = line.CountingNonRepeatingLetters();
             int expected = 6;
             Assert.AreEqual(actual, expected);
         }
@@ -68,7 +68,7 @@ namespace UnitTestProject1
         public void Counting_OneLitter()
         {
             DEV_1.Lines line = new DEV_1.Lines("a");
-            int actual = line.Counting();
+            int actual = line.CountingNonRepeatingLetters();
             int expected = 1;
             Assert.AreEqual(actual, expected);
         }
@@ -77,7 +77,7 @@ namespace UnitTestProject1
         public void Counting_Space()
         {
             DEV_1.Lines line = new DEV_1.Lines("  ");
-            int actual = line.Counting();
+            int actual = line.CountingNonRepeatingLetters();
             int expected = 1;
             Assert.AreEqual(actual, expected);
         }

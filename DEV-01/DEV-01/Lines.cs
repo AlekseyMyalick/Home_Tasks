@@ -53,16 +53,15 @@ namespace DEV_1
         /// method ComparisonOfLetter compares letters and counts the number of non-repeating
         /// </summary>
         #region ComparisonOfLetter
-        public int ComparisonOfLetter(int count, int i)
+        public int ComparisonLetterReturnCount(int count, int i)
         {
             for (int j = i + 1; j < LineLength; j++)
             {
-                if (Equals(Line[i], Line[j]) == false)
+                if (Line[i] != Line[j])
                 {
                     count++;
                     i++;
                 }
-
                 else
                 {
                     break;
@@ -77,7 +76,7 @@ namespace DEV_1
         /// methode Country counts the final amount
         /// </summary>
         #region Counting
-        public int Counting()
+        public int CountingNonRepeatingLetters()
         {
             if (isEmptyLine() == false)
             {
@@ -86,7 +85,7 @@ namespace DEV_1
                 for (int i = 0; i < LineLength; i++)
                 {
                     int finalAmount = 1;
-                    finalAmount = ComparisonOfLetter(finalAmount, i);
+                    finalAmount = ComparisonLetterReturnCount(finalAmount, i);
                     count = Math.Max(finalAmount, count);
                 }
 
